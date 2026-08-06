@@ -2,9 +2,10 @@
 
 int main(void)
 {
-   /*
-    * TODO: stampa qualcosa su schermo
-    */
+    /*
+     * TODO: stampa esattamente:
+     * Hello, computational physics!
+     */
 
     return 0;
 }
