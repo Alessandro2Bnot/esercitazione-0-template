@@ -1,0 +1,11 @@
+{
+  "name": "Laboratorio di Fisica Computazionale",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools"
+      ]
+    }
+  },
+  "postCreateCommand": "gcc --version && make --version"
+}
