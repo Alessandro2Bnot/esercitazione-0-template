@@ -2,7 +2,9 @@
 
 int main(void)
 {
-    printf("Hello!\n");
+   /*
+    * TODO: stampa qualcosa su schermo
+    */
 
     return 0;
 }
