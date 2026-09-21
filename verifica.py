@@ -56,7 +56,7 @@ def check_eco():
         ("testo", "1", "2.5x"),
         ("testo", "1", "nan"),
         ("testo", "1", "inf"),
-        ("testo", "1", "1e100"),
+        ("testo", "1", "1e1000"),
     ]
     for args in invalid:
         result = subprocess.run(

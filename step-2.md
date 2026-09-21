@@ -11,7 +11,7 @@ Il programma `eco.c` riceve tre argomenti:
 
 La lettura è già implementata: il primo argomento è conservato nella variabile
 `testo` così com'è, il secondo è convertito nella variabile `intero` di tipo
-`int`, il terzo nella variabile `reale` di tipo `float`. Anche il controllo
+`int`, il terzo nella variabile `reale` di tipo `double`. Anche il controllo
 sul numero e sulla validità degli argomenti è già scritto.
 
 **Completa soltanto il TODO, scrivendo una riga con una chiamata a `printf`**
