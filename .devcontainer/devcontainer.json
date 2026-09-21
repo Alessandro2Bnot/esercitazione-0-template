@@ -1,5 +1,8 @@
 {
-  "name": "Laboratorio di Fisica Computazionale",
+  "name": "Laboratorio di fisica computazionale — C17",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -7,5 +10,6 @@
       ]
     }
   },
-  "postCreateCommand": "gcc --version && make --version"
+  "postCreateCommand": "cc --version && make --version && python3 --version && gnuplot --version",
+  "remoteUser": "vscode"
 }

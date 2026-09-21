@@ -1,3 +1,8 @@
-hello
+/hello
+/eco
 *.o
 .vscode/
+saluto.txt
+eco.txt
+.DS_Store
+__pycache__/
