@@ -3,6 +3,18 @@
 Prosegui dopo il checkpoint di Hello World, nello stesso repository locale.
 Questa volta il risultato dipende dagli argomenti passati al programma.
 
+Scambiatevi i ruoli: chi ha usato la tastiera nello step 1 ora controlla il
+codice e discute le prove, mentre il compagno esegue i comandi. Sul PC
+comune aggiornate l'identità Git e l'autenticazione come indicato nel README.
+
+```sh
+git config user.name "Nome Cognome"
+git config user.email "email-associata-a-GitHub"
+```
+
+Se invece cambiate computer, chi prosegue riceve prima il lavoro già inviato con
+`git pull`, partendo da una copia locale senza modifiche in sospeso.
+
 Il programma `eco.c` riceve tre argomenti:
 
 ```text
@@ -10,11 +22,10 @@ Il programma `eco.c` riceve tre argomenti:
 ```
 
 La lettura è già implementata: il primo argomento è conservato nella variabile
-`testo` così com'è, il secondo è convertito nella variabile `intero` di tipo
-`int`, il terzo nella variabile `reale` di tipo `double`. Anche il controllo
-sul numero e sulla validità degli argomenti è già scritto.
+`testo` così com'è, il secondo va convertito nella variabile `intero` di tipo
+`int`, il terzo nella variabile `reale` di tipo `double`. 
 
-**Completa soltanto il TODO, scrivendo una riga con una chiamata a `printf`**
+**Completa il TODO, con una chiamata a `printf` dopo la conversione**
 che stampi le tre variabili, nell'ordine, separate da uno spazio e seguite da
 una nuova riga. Il testo deve rimanere invariato, l'intero va stampato in base
 10 e il reale con sei cifre dopo il punto decimale.
@@ -42,31 +53,69 @@ Oppure, con il Makefile:
 
 ```sh
 make eco         # compila il programma del secondo step
-make check-eco   # verifica eco e le conversioni; richiede Python 3
-make check-all   # verifica entrambi gli step
 ```
 
-`make` e `make check` restano dedicati a Hello World. `make check-eco` fallisce
-finché manca la stampa del secondo step.
+`make` senza argomenti resta dedicato a Hello World. Dopo la compilazione,
+esegui `./eco ciao 12 3.5` e confronta il risultato con l'esempio precedente.
 
 ## Domande stimolo
 
 - Gli elementi di `argv` sono già numeri? Che differenza ti aspetti passando
   `0012` come primo oppure come secondo argomento?
 - Come puoi passare un testo che contiene spazi mantenendolo come un solo
-  argomento? Che cosa cambia se togli le virgolette?
+  argomento?
 - Se scrivi `1.25e1` come terzo argomento, quale valore ti aspetti in uscita?
   La rappresentazione scritta sulla riga di comando deve rimanere uguale?
-- Se un argomento manca o non rappresenta il tipo richiesto (ad esempio una 
+- Se un argomento manca o non rappresenta il tipo richiesto (ad esempio una
   stringa invece di un numero), che cosa ti aspetti dal programma?
 - Come distingui il risultato da un messaggio di errore?
 
-Raccogli in `osservazioni.md` previsione, comando e risultato. 
+Raccogliete in `osservazioni.md` le vostre osservazioni.
 Puoi salvare un output con la redirezione `> eco.txt`.
 
+## Risultato, messaggio d'errore e codice di uscita
+
+Dopo aver completato il programma, esegui queste due prove. Per ciascuna,
+prevedi che cosa finirà nel file e che cosa comparirà nel terminale:
+
+```sh
+./eco ciao 12 3.5 > eco.txt
+echo $?
+cat eco.txt
+
+./eco ciao dodici 3.5 > eco.txt
+echo $?
+cat eco.txt
+```
+
+`echo $?` mostra il codice di uscita del comando appena terminato: eseguilo
+subito dopo `./eco`, prima di altri comandi. Zero indica una conclusione
+regolare; un valore diverso da zero segnala un errore. `cat` mostra il
+contenuto del file. La seconda redirezione `>` sostituisce il contenuto
+precedente di `eco.txt`.
+
+- Che cosa contiene `eco.txt` nei due casi?
+- Perché nel secondo caso il messaggio d'errore compare ancora nel terminale?
+  Individua nel sorgente le stampe su `stdout` e su `stderr`. Cosa viene 
+  rediretto da `>`?
+- Quali codici di uscita osservi? Come potresti usarli in un controllo automatico?
+
+Scrivi le tue osservazioni in `osservazioni.md`.
+
+## Dai parametri al calcolo fisico
+
+Esegui lo stesso programma cambiando soltanto il terzo argomento.
+Se quel numero rappresentasse il passo temporale di una simulazione,
+dovresti ricompilare per cambiarlo? E per cambiare la formula usata dal
+programma? Annota la differenza tra cambiare i parametri di un'esecuzione
+e modificare il codice che implementa il calcolo.
+
 **Checkpoint:** sai spiegare la differenza fra testo ricevuto, valore
-convertito e rappresentazione stampata, usando le tue prove.
+convertito e rappresentazione stampata, usando le tue prove, e riconoscere
+un'esecuzione terminata con un errore.
 
 Registra le modifiche di `eco.c` e `osservazioni.md` in un nuovo commit e
 invialo con Git. Come riconosci nella cronologia il completamento dei due
-step? Annota la tua verifica, poi segui la [consegna finale](README.md#consegna-finale).
+step? Annota la verifica in `osservazioni.md` e registra anche questa aggiunta.
+Poi controllate insieme il lavoro e seguite la
+[consegna finale di gruppo](README.md#consegna-finale).
