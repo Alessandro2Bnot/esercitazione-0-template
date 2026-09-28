@@ -21,9 +21,12 @@ Il programma `eco.c` riceve tre argomenti:
 ./eco TESTO INTERO REALE
 ```
 
-La lettura è già implementata: il primo argomento è conservato nella variabile
+Il primo argomento è già conservato nella variabile
 `testo` così com'è, il secondo va convertito nella variabile `intero` di tipo
-`int`, il terzo nella variabile `reale` di tipo `double`. 
+`int`, il terzo nella variabile `reale` di tipo `double`.
+Per le conversioni usa le funzioni fornite `leggi_intero` e `leggi_reale`:
+riconoscono gli argomenti non numerici, ma non controllano i limiti dei tipi.
+Per queste prove usa numeri piccoli e finiti.
 
 **Completa il TODO, con una chiamata a `printf` dopo la conversione**
 che stampi le tre variabili, nell'ordine, separate da uno spazio e seguite da
@@ -38,8 +41,9 @@ ciao 12 3.500000
 ```
 
 Il template iniziale compila, ma con argomenti validi non stampa ancora nulla.
-Le istruzioni `(void)` evitano segnalazioni sulle variabili finché manca la
-stampa: puoi lasciarle dove sono. Lettura e conversioni non sono da riscrivere.
+L'istruzione `(void)testo` evita una segnalazione finché manca la stampa:
+puoi rimuoverla quando usi la variabile. Completa le chiamate alle funzioni
+di conversione e la stampa; le due funzioni sono già fornite.
 
 ## Strumenti a disposizione
 
