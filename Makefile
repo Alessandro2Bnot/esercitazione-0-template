@@ -11,5 +11,8 @@ hello: hello.c
 eco: eco.c
 	$(CC) $(CFLAGS) -o $@ $<
 
+eco2: eco2.c
+	$(CC) $(CFLAGS) -o $@ $<
+
 clean:
 	rm -f hello eco

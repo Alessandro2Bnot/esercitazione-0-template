@@ -15,7 +15,7 @@ int leggi_intero(char *testo)
       // Nessun numero trovato
       fprintf(stderr, "Il secondo argomento deve essere un intero in base 10.\n");
       exit(2);
-    } else if (|| *fine != '\0') {
+    } else if (*fine != '\0') {
       // Caratteri residui, ad esempio "12abc"
       fprintf(stderr, "Il secondo argomento deve essere un intero in base 10.\n");
       exit(2);
@@ -37,16 +37,12 @@ double leggi_reale(char *testo)
     
   double valore = strtod(testo, &fine);
   
-  if (fine == testo || *fine != '\0') {
-    fprintf(stderr, "Il terzo argomento deve essere un numero reale.\n");
-    exit(2);
-  }
   /* Nessuna cifra letta oppure caratteri rimasti dopo il numero. */
   if (fine == testo) {
     // Nessun numero trovato
     fprintf(stderr, "Il terzo argomento deve essere un numero reale.\n");      
     exit(2);
-  } else if (|| *fine != '\0') {
+  } else if (*fine != '\0') {
       // Caratteri residui, ad esempio "12abc"
     fprintf(stderr, "Il terzo argomento deve essere un numero reale.\n");     
     exit(2);
