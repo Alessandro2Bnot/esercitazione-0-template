@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -std=c17 -Wall -Wextra -Wpedantic -Werror
 
-.PHONY: all check check-hello check-eco check-all clean
+.PHONY: all clean
 
 all: hello
 
