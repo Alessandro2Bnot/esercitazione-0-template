@@ -53,6 +53,18 @@ Questi dati identificano l'autore dei commit; non sono credenziali di accesso.
 Esegui i comandi Git dalla cartella `esercitazione-0`, sul branch predefinito 
 che trovi dopo il clone.
 
+Gia' che ci siamo, configura emacs come editor di default di git
+
+```sh
+git config --global core.editor "emacs"
+```
+
+o, ancora meglio, emacs da terminale:
+
+```sh
+git config --global core.editor "emacs -nw"
+```
+
 **Checkpoint:** sai aprire il tuo repository su GitHub e riconoscere la
 copia locale e il suo remoto `origin`.
 
