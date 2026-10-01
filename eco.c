@@ -10,9 +10,12 @@ int main(int argc, char *argv[])
 
     char *testo = argv[1];
 
-    /* TODO: converti gli argomenti in tipi appropriati. Usa atoi o atof */
+    /* TODO: converti gli argomenti in tipi appropriati. Usa atoi o atof
+    * prendi ispirazione da:
+    * https://en.cppreference.com/c/string/byte/atoi e 
+    * https://en.cppreference.com/c/string/byte/atof */
 
-    /* Evita una segnalazione finche' testo non viene usato nella stampa. */
+    /* Evita un warning finche' la variabiletesto non viene usato nella stampa. */
     (void)testo;
 
     /* TODO: scrivi una sola chiamata a printf che stampi testo, intero e reale,

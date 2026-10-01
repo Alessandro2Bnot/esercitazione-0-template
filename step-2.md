@@ -116,7 +116,7 @@ e modificare il codice che implementa il calcolo.
 
 **Checkpoint:** sai spiegare la differenza fra testo ricevuto, valore
 convertito e rappresentazione stampata, usando le tue prove, e riconoscere
-un'esecuzione terminata con un errore.
+un'esecuzione terminata con un errore? Prova a usare eco2.c, cosa cambia?
 
 Registra le modifiche di `eco.c` e `osservazioni.md` in un nuovo commit e
 invialo con Git. Come riconosci nella cronologia il completamento dei due
