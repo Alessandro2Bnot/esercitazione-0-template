@@ -57,7 +57,11 @@ Come ho verificato che la versione provata sia presente su GitHub:
 
 sono andato nella sezione repositories del mio profilo github, e ho confermato che quella giusta e' stata aggiornata di recente.
 
-Che cosa ho osservato prima e dopo `git pull`, e perché non serve un nuovo clone:
+Che cosa ho osservato prima e dopo `git pull`, e perché non serve un nuovo clone: 
+
+Ho scritto questo messaggio online direttamente da GitHub, dopo pull ho notato la modifica anche sul computer. 
+
+Non serve un nuovo clone perche' con git pull ho scaricato la modifica direttamente.
 
 ## Step 2 — Eco: prima prova
 
